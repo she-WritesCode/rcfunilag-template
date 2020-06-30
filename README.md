@@ -35,3 +35,7 @@ live-server public
 ```
 
 Visit the site on [127.0.0.1:8080](http://127.0.0.1:8080)
+
+### Contributing
+
+For details abut contributing go to [CONTRIBUTING.md]
