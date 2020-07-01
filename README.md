@@ -16,6 +16,12 @@ Clone the git repository
 git clone https://github.com/she-WritesCode/rcfunilag-template.git
 ```
 
+Enter into the project directory
+
+```cmd
+cd rcfunilag-template
+```
+
 Install all dependencies
 
 ```cmd
