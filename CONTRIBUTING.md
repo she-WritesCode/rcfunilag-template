@@ -17,7 +17,7 @@ Learn the following technologies
 - [Feature Branch Workflows](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow). Here we will be learning to use Git to work well with teams so
 
 ### Second Task: 
-Clone the project repository and go through the design files. We will be bringing those amazing design to life.
+Clone the project repository and go through the [design files](https://www.figma.com/file/RWWXsPWxhhpxPaeacEFS32/RCF-WEBSITE-UI?node-id=5%3A3). We will be bringing those amazing design to life.
 
 ### Lastly: 
 I'll be breaking the project into smaller tasks and assigning them to you.
