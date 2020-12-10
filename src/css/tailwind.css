@@ -1,3 +1,323 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/**
+ * RCF WEBSITE TEMPLATE
+ * 
+ * TABLE OF CONTENT
+ * 1. General: p, a.
+ * 2. Lists: unordered, ordered, definition, bulleted, numbered, lined, striped, or any group of elements presented in a list-type format.
+ * 3. Headings: h1, h2, h3, h4, h5, h6 and variations of typographic headings.
+ * 4. Buttons: buttons are the quintessential UI element. Capture all the unique button patterns found throughout the experience: primary, secondary, big, small, disabled, active, loading, and even buttons that look like text links.
+ * 5. Forms: inputs, text areas, select menus, checkboxes, switches, radio buttons, sliders, and other forms of user input.
+ * 6. Colors: capture all unique colors presented in the interface. This category can be aided by fantastic style guide bootstrapping tools like CSS Stats and Stylify Me.
+ * 7. Icons: icons are a special type of image worthy of their own category. Capture magnifying glasses, social icons, arrows, hamburgers, spinners, favicons, and every other interface icon.
+ * 8. Image types: logos, hero images, avatars, thumbnails, backgrounds, and any other type of image pattern that shows up in the UI.
+ * 9. Media: video players, audio players and other rich media elements.
+ * 10. Blocks: also known as touts, callouts, summaries, ads, or hero units, blocks are collections of typographic headings and/or images and/or summary text (see Nicole Sullivan’s write-up about the media object as an example of a block).
+ * 11. Messaging: alerts, success, errors, warnings, validation, loaders, popups, tooltips, and so on. This can be a challenging category to capture as messaging often requires user action to expose.
+ * 12. Interactive components: accordions, tabs, carousels, and other functional modules with moving parts.
+ * 13. Animation: animation is an elemental aspect of user interfaces, and should therefore be documented. This requires using screen recording software such as QuickTime to capture any UI element that moves, fades, shakes, transitions, or shimmies across the screen.
+ * 
+ */
+
+/***************************************************
+ * 
+ * 1. General: p, a.
+ * 
+ ***************************************************/
+
+body {
+	font-size: 16px;
+	font-family: "DM Sans" sans-serif;
+	line-height: 21px;
+	@apply antialiased text-secondary-500;
+}
+p {
+	/* code goes here */
+}
+
+a {
+	@apply text-primary-700;
+}
+a:hover {
+	text-decoration: underline solid theme("colors.primary.700");
+	@apply text-secondary-700;
+}
+a:focus {
+	text-decoration: underline solid theme("colors.primary.700");
+}
+a:active {
+	@apply text-tertiary-700;
+}
+
+/***************************************************
+ * 
+ * 2. Lists: unordered, ordered, definition, bulleted, 
+ * numbered, lined, striped, or any group of elements 
+ * presented in a list-type format.
+ * 
+ ***************************************************/
+ul {
+	/* code goes here */
+}
+
+ul li {
+	/* code goes here */
+}
+
+ul.list-inline {
+	/* horizontal list without bullets */
+}
+
+/***************************************************
+ * 
+ * 3. Headings: h1, h2, h3, h4, h5, h6 and variations
+ * of typographic headings.
+ * 
+ ***************************************************/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.main-header,
+.sub-header {
+	/* shared styles like font family, weight*/
+	@apply text-secondary-700 font-semibold;
+}
+
+h1 {
+	line-height: 3rem;
+	@apply text-4xl;
+}
+
+h2 {
+	@apply leading-10 text-3xl;
+}
+
+h3 {
+	@apply leading-9 text-2xl;
+}
+
+h4 {
+	@apply leading-8 text-xl;
+}
+
+h5 {
+	@apply leading-7 text-lg;
+}
+
+h6 {
+	@apply leading-6 text-base;
+}
+
+.main-header {
+	/* Main Header */
+	font-weight: bold;
+	font-size: 80px;
+	line-height: 104px;
+}
+
+.sub-header {
+	/* Sub Header */
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 42px;
+}
+
+/***************************************************
+ * 
+ * 4. Buttons: buttons are the quintessential UI
+ * element. Capture all the unique button patterns
+ * found throughout the experience: primary, secondary,
+ * big, small, disabled, active, loading, and even
+ * buttons that look like text links.
+ * 
+ ***************************************************/
+
+.btn {
+	/* defualt button */
+	font-weight: 500;
+}
+.btn:hover {
+}
+.btn:focus {
+	@apply outline-none;
+}
+.btn.inactive {
+	/* check design files*/
+}
+
+.btn.primary {
+	/* Purple button */
+}
+.btn.primary:hover {
+}
+.btn.primary.inactive {
+}
+
+.btn.secondary {
+	/* black button */
+}
+.btn.secondary:hover {
+}
+.btn.secondary.inactive {
+}
+
+.btn.tertiary {
+	/* red(pinkish) button */
+}
+.btn.tertiary:hover {
+}
+.btn.tertiary.inactive {
+}
+
+/***************************************************
+ * 
+ * 5. Forms: inputs, text areas, select menus, checkboxes,
+ * switches, radio buttons, sliders, and other forms of
+ * user input.
+ * 
+ ***************************************************/
+
+input,
+textarea,
+select {
+	/*shared*/
+}
+
+input:not([type="checkbox"]):not([type="radio"]).valid,
+textarea.valid,
+select.valid {
+} /* green */
+
+input:not([type="checkbox"]):not([type="radio"]).invalid,
+textarea.invalid,
+select.invalid {
+} /* red */
+
+input:not([type="checkbox"]):not([type="radio"]):disabled,
+textarea:disabled,
+select:disabled {
+} /* disabled */
+
+input:not([type="checkbox"]):not([type="radio"]):focus,
+textarea:focus,
+select:focus {
+	@apply outline-none;
+} /* focus */
+
+input:not([type="checkbox"]):not([type="radio"]):active,
+textarea:active,
+select:active {
+} /* active */
+
+textarea {
+	/* set height */
+}
+
+input[type="checkbox"] {
+}
+input[type="radio"] {
+}
+
+select {
+}
+
+/***************************************************
+ * 
+ * 6. Colors: capture all unique colors presented in
+ * the interface. This category can be aided by
+ * fantastic style guide bootstrapping tools like CSS
+ * Stats and Stylify Me.
+ * (TAKEN CARE OF BY TAILWIND)
+ * 
+ ***************************************************/
+
+/***************************************************
+ * 
+ * 7. Icons: icons are a special type of image worthy
+ * of their own category. Capture magnifying glasses,
+ * social icons, arrows, hamburgers, spinners, favicons,
+ * and every other interface icon.
+ * (THIS WOULD MOST LIKELY BE HANDLES BY FONTAWESOME OR SVGs)
+ * 
+ ***************************************************/
+
+/***************************************************
+ * 
+ * 8. Image types: logos, hero images, avatars,
+ * thumbnails, backgrounds, and any other type of
+ * image pattern that shows up in the UI.
+ * 
+ ***************************************************/
+.avatar {
+} /* md */
+.avatar {
+} /* xs */
+.avatar {
+} /* sm */
+.avatar {
+} /* lg */
+
+.thumbnail {
+} /* md */
+.thumbnail {
+} /* xs */
+.thumbnail {
+} /* sm */
+.thumbnail {
+} /* lg */
+
+/***************************************************
+ * 
+ * 9. Media: video players, audio players and other
+ * rich media elements.
+ * 
+ ***************************************************/
+
+/***************************************************
+ * 
+ * 10. Blocks: also known as touts, callouts, summaries,
+ * ads, or hero units, blocks are collections of
+ * typographic headings and/or images and/or summary
+ * text (see Nicole Sullivan’s write-up about the media
+ * object as an example of a block).
+ * 
+ ***************************************************/
+
+/***************************************************
+ * 
+ * 11. Messaging: alerts, success, errors, warnings,
+ * validation, loaders, popups, tooltips, and so on.
+ * This can be a challenging category to capture as
+ * messaging often requires user action to expose.
+ * 
+ ***************************************************/
+
+/***************************************************
+ * 
+ * 12. Interactive components: accordions, tabs, carousels,
+ * and other functional modules with moving parts.
+ * 
+ ***************************************************/
+
+/***************************************************
+ * 
+ * 13 Animation: animation is an elemental aspect of
+ * user interfaces, and should therefore be documented.
+ * This requires using screen recording software such 
+ * as QuickTime to capture any UI element that moves,
+ * fades, shakes, transitions, or shimmies across the screen.
+ * 
+ ***************************************************/
+
+/***************************************************
+ * 
+ * 1. Others
+ * 
+ ***************************************************/
