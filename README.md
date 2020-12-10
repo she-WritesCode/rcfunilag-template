@@ -44,4 +44,4 @@ Visit the site on [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 ### Contributing
 
-For details abut contributing go to [CONTRIBUTING.md](CONTRIBUTING.md)
+For details about contributing go to [CONTRIBUTING.md](CONTRIBUTING.md)
