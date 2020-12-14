@@ -1,6 +1,4 @@
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /**
  * RCF WEBSITE TEMPLATE
@@ -30,7 +28,7 @@
 
 body {
 	font-size: 16px;
-	font-family: "DM Sans" sans-serif;
+	font-family: "DM Sans", sans-serif;
 	line-height: 21px;
 	@apply antialiased text-secondary-500;
 }
@@ -128,6 +126,7 @@ h6 {
 	font-size: 32px;
 	line-height: 42px;
 }
+@tailwind components;
 
 /***************************************************
  * 
@@ -140,40 +139,49 @@ h6 {
  ***************************************************/
 
 .btn {
-	/* defualt button */
+	/* shared button styles */
 	font-weight: 500;
+	@apply px-10 py-2 border-2 border-transparent text-secondary-500 rounded-sm no-underline;
 }
-.btn:hover {
+.btn:hover,
+button:hover {
+	@apply shadow-xl no-underline;
 }
-.btn:focus {
+.btn:focus,
+button:focus {
 	@apply outline-none;
 }
 .btn.inactive {
-	/* check design files*/
+	@apply bg-gray-200;
 }
 
-.btn.primary {
-	/* Purple button */
+.btn.btn-primary,
+button {
+	@apply bg-primary-600 text-white border-primary-600;
 }
-.btn.primary:hover {
+.btn.btn-primary:hover {
 }
-.btn.primary.inactive {
-}
-
-.btn.secondary {
-	/* black button */
-}
-.btn.secondary:hover {
-}
-.btn.secondary.inactive {
+.btn.btn-primary.inactive,
+button.inactive {
+	@apply bg-transparent text-primary-600;
 }
 
-.btn.tertiary {
-	/* red(pinkish) button */
+.btn.btn-secondary {
+	@apply bg-secondary-700 text-white border-secondary-700;
 }
-.btn.tertiary:hover {
+.btn.btn-secondary:hover {
 }
-.btn.tertiary.inactive {
+.btn.btn-secondary.inactive {
+	@apply bg-secondary-300 text-secondary-700 border-transparent;
+}
+
+.btn.btn-tertiary {
+	@apply bg-tertiary-700 text-white border-tertiary-700;
+}
+.btn.btn-tertiary:hover {
+}
+.btn.btn-tertiary.inactive {
+	@apply bg-tertiary-500 border-transparent;
 }
 
 /***************************************************
@@ -184,49 +192,146 @@ h6 {
  * 
  ***************************************************/
 
+button,
 input,
-textarea,
-select {
-	/*shared*/
+optgroup,
+select,
+textarea {
+	padding: 0;
+	line-height: inherit;
+	color: inherit;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
 }
 
-input:not([type="checkbox"]):not([type="radio"]).valid,
+[multiple],
+[type="date"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+select,
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	border-color: #6b7280;
+	border-width: 1px;
+	border-radius: 0;
+	padding-top: 0.5rem;
+	padding-right: 0.75rem;
+	padding-bottom: 0.5rem;
+	padding-left: 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	@apply mt-1 block w-full rounded-md border-gray-300 shadow-sm;
+}
+
+select {
+	@apply w-full;
+}
+
+[multiple].valid,
+[type="date"].valid,
+[type="datetime-local"].valid,
+[type="email"].valid,
+[type="month"].valid,
+[type="number"].valid,
+[type="password"].valid,
+[type="search"].valid,
+[type="tel"].valid,
+[type="text"].valid,
+[type="time"].valid,
+[type="url"].valid,
+[type="week"].valid,
 textarea.valid,
 select.valid {
+	@apply border-green-500;
 } /* green */
 
-input:not([type="checkbox"]):not([type="radio"]).invalid,
+[multiple].invalid,
+[type="date"].invalid,
+[type="datetime-local"].invalid,
+[type="email"].invalid,
+[type="month"].invalid,
+[type="number"].invalid,
+[type="password"].invalid,
+[type="search"].invalid,
+[type="tel"].invalid,
+[type="text"].invalid,
+[type="time"].invalid,
+[type="url"].invalid,
+[type="week"].invalid,
 textarea.invalid,
-select.invalid {
+select.invalid,
+[multiple].invalid:focus,
+[type="date"].invalid:focus,
+[type="datetime-local"].invalid:focus,
+[type="email"].invalid:focus,
+[type="month"].invalid:focus,
+[type="number"].invalid:focus,
+[type="password"].invalid:focus,
+[type="search"].invalid:focus,
+[type="tel"].invalid:focus,
+[type="text"].invalid:focus,
+[type="time"].invalid:focus,
+[type="url"].invalid:focus,
+[type="week"].invalid:focus,
+textarea.invalid:focus,
+select.invalid:focus {
+	@apply border-red-500;
 } /* red */
 
-input:not([type="checkbox"]):not([type="radio"]):disabled,
+[multiple]:disabled,
+[type="date"]:disabled,
+[type="datetime-local"]:disabled,
+[type="email"]:disabled,
+[type="month"]:disabled,
+[type="number"]:disabled,
+[type="password"]:disabled,
+[type="search"]:disabled,
+[type="tel"]:disabled,
+[type="text"]:disabled,
+[type="time"]:disabled,
+[type="url"]:disabled,
+[type="week"]:disabled,
 textarea:disabled,
 select:disabled {
+	@apply bg-secondary-200;
 } /* disabled */
-
-input:not([type="checkbox"]):not([type="radio"]):focus,
+[multiple]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="email"]:focus,
+[type="month"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="text"]:focus,
+[type="time"]:focus,
+[type="url"]:focus,
+[type="week"]:focus,
 textarea:focus,
 select:focus {
-	@apply outline-none;
+	@apply border-indigo-300 ring-indigo-200 ring-opacity-50 outline-none;
 } /* focus */
-
-input:not([type="checkbox"]):not([type="radio"]):active,
-textarea:active,
-select:active {
-} /* active */
-
-textarea {
-	/* set height */
-}
-
-input[type="checkbox"] {
-}
-input[type="radio"] {
-}
-
-select {
-}
 
 /***************************************************
  * 
@@ -290,6 +395,10 @@ select {
  * 
  ***************************************************/
 
+.event-cards {
+	/* */
+}
+
 /***************************************************
  * 
  * 11. Messaging: alerts, success, errors, warnings,
@@ -321,3 +430,5 @@ select {
  * 1. Others
  * 
  ***************************************************/
+
+@tailwind utilities;
